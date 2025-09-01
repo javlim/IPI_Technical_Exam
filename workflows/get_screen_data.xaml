@@ -1,0 +1,280 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="get_screen_data" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_arrPersonData" Type="OutArgument(s:String[])" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="get_screen_data" sap:VirtualizedContainerService.HintSize="821,2114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="arrPersonData">
+        <Variable.Default>
+          <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">new string[10]</CSharpValue>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Generate a Random Name - Fake Name Gener" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,1810" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,1560" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strSSN" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'gettext 'Name''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="aaa407a7-5707-434f-997f-abf25da2c8ee" ContentHash="vDvF-cCYDEWXJseD5SFXbQ" DesignTimeRectangle="549, 505, 540, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H3' parentclass='address' parentid='details' /&gt;" Guid="a764ea08-234f-4a0d-a398-a5a86553d8e2" InformativeScreenshot="afdad3ace909dd365404584c7756babf.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/Kavogj5u9EGPqQohfoOKXw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">arrPersonData[0]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '2177 Cabell AvenueArlin…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" ContentHash="pLbBnAEoz0qvmu4kwjhs0g" DesignTimeRectangle="549, 524, 540, 36" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='details' tag='DIV' parentclass='address' /&gt;" Guid="3bd97e61-70e7-4faa-8624-856ed17c8981" InformativeScreenshot="0296e742348ba097b2bb0fda2e784d3c.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/ANX94p03N0OTVFiBFh8etg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">arrPersonData[1]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Harris'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="7e6460c1-4264-47ee-af49-69d9073cbdea" ContentHash="VA7_xVS-a0OXXamupU2hGA" DesignTimeRectangle="734, 310, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='1' /&gt;" Guid="db47e564-9e20-4a44-843e-ab69ba1f5fe3" InformativeScreenshot="2e40fb09bad6c0ed13a1b5e65e7106ff.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/CplbhvgnmUuy9_Tiw-f0Jg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">arrPersonData[2]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '226-93-XXXX You should …'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" ContentHash="2PYleNE3qUauEHHX3a6SbA" DesignTimeRectangle="734, 335, 355, 37" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='2' /&gt;" Guid="4051da49-04d8-43af-98bd-78c8540a2e30" InformativeScreenshot="68964545b4c256b007460895ee4ce525.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/tzgnUyCSsk6rpmUgvNG0QQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">strSSN</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">arrPersonData[3]</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.Text.RegularExpressions.Regex.Match(strSSN, @"\d+-\d+-XXXX").Value</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NGetText DisplayName="Get Text '38.7881, -77.000768'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="ac3f2ad1-4bb3-481f-b02e-2dc36f85a82c" ContentHash="Uqv02G3LBUmGk1ZjyDgugQ" DesignTimeRectangle="734, 377, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='3' /&gt;" Guid="c957cf71-fbf6-4a65-b3fe-d523d37c5527" InformativeScreenshot="e3de1268209bd624e02095b52cdc170e.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/7PSme0_3yUep1RXvgUwRmA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">arrPersonData[4]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'June 28, 1966'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="ac3f2ad1-4bb3-481f-b02e-2dc36f85a82c" ContentHash="l3hr60Eiu0WPAAHXQ7q0DA" DesignTimeRectangle="734, 545, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='6' /&gt;" Guid="f25a17ab-2f31-4cd8-8a1e-089c84e17b41" InformativeScreenshot="3593ae6e67f14cec24d2045f9f315952.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/YQyMzjoiyUqPIV4AY6vEpA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">arrPersonData[5]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '59 years old'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="4178a9d3-6a24-4a1a-8029-c55e66f2756f" ContentHash="ytkwr_4anUWZ_mZjT21LxQ" DesignTimeRectangle="734, 570, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='7' /&gt;" Guid="05b78eea-5735-466d-b67a-64ebe8805306" InformativeScreenshot="b9d418466e7178e31184737d8365345b.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/bia6O4iWhEKJyioSmc2Qfw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">arrPersonData[6]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Cancer'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="2c3f588a-4007-4a5e-9166-e73f7d4546d4" ContentHash="abK4q6xjWEqZMi-MNaEg-w" DesignTimeRectangle="734, 595, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='8' /&gt;" Guid="a4bb2c76-f610-4323-8dfc-7e1f386057e7" InformativeScreenshot="5d8869d1fec13ce506cb154fc9b9123b.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/dO9g6-T-8kOKKkaxLN1wUw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">arrPersonData[7]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'StopGrey'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="8eb378d0-4827-4525-a421-8a17c2643d48" ContentHash="K7DZNWzTh0CMkDM_Z86DjA" DesignTimeRectangle="734, 396, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='17' /&gt;" Guid="a2b1d8ba-6d3a-44b5-8a0c-dae12be51cc3" InformativeScreenshot="a49c31c3c978602992595ca9b26b0985.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/kC9DWRRW7EmAlq4luwdLMQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">arrPersonData[8]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Mechanical engineer'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="ac1745d5-fd15-44f6-9f05-6215d3f30dd3" ContentHash="nMZ3KrphMkahZ50brFkoew" DesignTimeRectangle="734, 421, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='18' /&gt;" Guid="93dca4d6-ffc1-4840-9862-f186bef04527" InformativeScreenshot="8aa99632c95631f084e0e9fe87aaad65.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/8KrNlC5RNEqtchcEQP2isA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">arrPersonData[9]</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1456, 868" BrowserType="Edge" ContentHash="4AIeGX442UeWEmBbliJxOw" IconBase64="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" InformativeScreenshot="283717797381ae6d3d8e2037c8c1dfb1.jpg" Reference="GQEFVDv4VUOlrtPOTZWeDw/qOKNjU9rhkucFli1N5SMKg" Selector="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" Url="https://www.fakenamegenerator.com/" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Person data:\n " + string.Join(",",arrPersonData)</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <Assign sap:VirtualizedContainerService.HintSize="502,106" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">
+          <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">out_arrPersonData</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">
+          <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">arrPersonData</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>
