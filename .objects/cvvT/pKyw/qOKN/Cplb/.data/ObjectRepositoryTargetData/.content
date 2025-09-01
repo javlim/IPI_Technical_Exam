@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VA7_xVS-a0OXXamupU2hGA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="7e6460c1-4264-47ee-af49-69d9073cbdea" DesignTimeRectangle="734, 310, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='1' /&gt;" Guid="db47e564-9e20-4a44-843e-ab69ba1f5fe3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2e40fb09bad6c0ed13a1b5e65e7106ff.png" xmlns="">0AZe_mC7r6k-EvQYPcWgNVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

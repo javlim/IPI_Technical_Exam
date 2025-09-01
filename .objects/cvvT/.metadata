@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Generate a Random Name - Fake Name Generator",
+  "Type": "App",
+  "Id": "cvvTUW8FTUeioIWdCawLHA",
+  "Reference": "GQEFVDv4VUOlrtPOTZWeDw/cvvTUW8FTUeioIWdCawLHA",
+  "Created": "2025-09-01T06:31:01.2269617Z",
+  "Updated": "2025-09-01T06:31:01.2269617Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

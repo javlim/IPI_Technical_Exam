@@ -104,7 +104,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="get_screen_data" sap:VirtualizedContainerService.HintSize="821,2114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="get_screen_data" sap:VirtualizedContainerService.HintSize="821,2391" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arrPersonData">
         <Variable.Default>
@@ -117,22 +117,23 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Generate a Random Name - Fake Name Gener" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,1810" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Generate a Random Name - Fake Name Gener" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="572,2087" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,1560" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1837" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strSSN" />
+              <Variable x:TypeArguments="x:String" Name="strAddress" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'gettext 'Name''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+            <uix:NGetText DisplayName="Get Text 'gettext 'Name''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,139" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="aaa407a7-5707-434f-997f-abf25da2c8ee" ContentHash="vDvF-cCYDEWXJseD5SFXbQ" DesignTimeRectangle="549, 505, 540, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H3' parentclass='address' parentid='details' /&gt;" Guid="a764ea08-234f-4a0d-a398-a5a86553d8e2" InformativeScreenshot="afdad3ace909dd365404584c7756babf.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/Kavogj5u9EGPqQohfoOKXw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
@@ -142,17 +143,40 @@
                 </OutArgument>
               </uix:NGetText.TextString>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text '2177 Cabell AvenueArlin…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+            <uix:NGetText DisplayName="Get Text '2177 Cabell AvenueArlin…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,139" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" ContentHash="pLbBnAEoz0qvmu4kwjhs0g" DesignTimeRectangle="549, 524, 540, 36" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='details' tag='DIV' parentclass='address' /&gt;" Guid="3bd97e61-70e7-4faa-8624-856ed17c8981" InformativeScreenshot="0296e742348ba097b2bb0fda2e784d3c.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/ANX94p03N0OTVFiBFh8etg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
               <uix:NGetText.TextString>
                 <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">arrPersonData[1]</CSharpReference>
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">arrPersonData[1]</CSharpReference>
                 </OutArgument>
               </uix:NGetText.TextString>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'Harris'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,277" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">arrPersonData[1]</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">strAddress.Replace(",","")</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <uix:NGetText DisplayName="Get Text 'Harris'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,139" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" CVScreenId="7e6460c1-4264-47ee-af49-69d9073cbdea" ContentHash="VA7_xVS-a0OXXamupU2hGA" DesignTimeRectangle="734, 310, 355, 20" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='1' /&gt;" Guid="db47e564-9e20-4a44-843e-ab69ba1f5fe3" InformativeScreenshot="2e40fb09bad6c0ed13a1b5e65e7106ff.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/CplbhvgnmUuy9_Tiw-f0Jg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
@@ -168,7 +192,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text '226-93-XXXX You should …'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
+            <uix:NGetText DisplayName="Get Text '226-93-XXXX You should …'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,139" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="7f39960c-7114-47c2-917a-59a936d5bfa9" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="fakenamegenerator.com/gen-random-us-us.php" ContentHash="2PYleNE3qUauEHHX3a6SbA" DesignTimeRectangle="734, 335, 355, 37" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DD' parentclass='dl-horizontal' parentid='details' idx='2' /&gt;" Guid="4051da49-04d8-43af-98bd-78c8540a2e30" InformativeScreenshot="68964545b4c256b007460895ee4ce525.png" Reference="GQEFVDv4VUOlrtPOTZWeDw/tzgnUyCSsk6rpmUgvNG0QQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>

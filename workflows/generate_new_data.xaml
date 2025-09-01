@@ -95,7 +95,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Generate a Random Name - Fake Name Gener(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,532" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="d2fe2f86-396c-4535-990d-0d5801c2bb58" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Generate a Random Name - Fake Name Gener(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,532" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="d2fe2f86-396c-4535-990d-0d5801c2bb58" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

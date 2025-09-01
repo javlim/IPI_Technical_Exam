@@ -1,0 +1,13 @@
+﻿{
+  "Name": "StopGrey",
+  "Type": "Element",
+  "Id": "kC9DWRRW7EmAlq4luwdLMQ",
+  "Reference": "GQEFVDv4VUOlrtPOTZWeDw/kC9DWRRW7EmAlq4luwdLMQ",
+  "ParentRef": "GQEFVDv4VUOlrtPOTZWeDw/qOKNjU9rhkucFli1N5SMKg",
+  "Created": "2025-09-01T07:05:21.1901736Z",
+  "Updated": "2025-09-01T07:05:21.1901736Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

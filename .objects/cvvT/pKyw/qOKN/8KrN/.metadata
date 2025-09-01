@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Mechanical engineer",
+  "Type": "Element",
+  "Id": "8KrNlC5RNEqtchcEQP2isA",
+  "Reference": "GQEFVDv4VUOlrtPOTZWeDw/8KrNlC5RNEqtchcEQP2isA",
+  "ParentRef": "GQEFVDv4VUOlrtPOTZWeDw/qOKNjU9rhkucFli1N5SMKg",
+  "Created": "2025-09-01T07:06:59.5147151Z",
+  "Updated": "2025-09-01T07:06:59.5147151Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

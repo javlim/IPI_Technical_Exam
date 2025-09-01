@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Generate a Random Name - Fake Name Gener",
+  "Type": "Screen",
+  "Id": "qOKNjU9rhkucFli1N5SMKg",
+  "Reference": "GQEFVDv4VUOlrtPOTZWeDw/qOKNjU9rhkucFli1N5SMKg",
+  "ParentRef": "GQEFVDv4VUOlrtPOTZWeDw/pKywDsPjy0q7hA8sYKqfOg",
+  "Created": "2025-09-01T06:31:02.7380155Z",
+  "Updated": "2025-09-01T06:31:02.7380155Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.14.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
